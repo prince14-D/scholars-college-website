@@ -1,138 +1,235 @@
-/* ============================================================
-   SCHOLAR'S COLLEGE — MAIN JAVASCRIPT
-   ============================================================ */
 
-document.addEventListener('DOMContentLoaded', function () {
 
-  /* ── 1. NAV SCROLL EFFECT ── */
-  const nav = document.getElementById('mainNav');
-  if (nav) {
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('nav-scrolled', window.scrollY > 60);
-    });
-  }
 
-  /* ── 2. BACK TO TOP BUTTON ── */
-  const btn = document.getElementById('backToTop');
-  if (btn) {
-    window.addEventListener('scroll', () => {
-      btn.classList.toggle('show', window.scrollY > 400);
-    });
-    btn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-  }
+/* =====================================
+   SCHOLAR'S COLLEGE WEBSITE JAVASCRIPT
+===================================== */
 
-  /* ── 3. SCROLL REVEAL ANIMATION ── */
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+/* ============================
+   NAVBAR SCROLL EFFECT
+============================ */
 
-  reveals.forEach(el => observer.observe(el));
+window.addEventListener("scroll", function () {
+    const navbar = document.querySelector(".navbar");
 
-  /* ── 4. COUNTER ANIMATION ── */
-  function animateCounter(el, target, duration = 2000) {
-    let start = 0;
-    const step = target / (duration / 16);
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= target) {
-        el.textContent = Number.isInteger(target) ? target : target.toFixed(0);
-        clearInterval(timer);
-      } else {
-        el.textContent = Math.floor(start);
-      }
-    }, 16);
-  }
+    if (window.scrollY > 50) {
+        navbar.classList.add("navbar-scrolled");
+    } else {
+        navbar.classList.remove("navbar-scrolled");
+    }
+});
 
-  const counters = document.querySelectorAll('[data-count]');
-  if (counters.length) {
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          animateCounter(el, parseInt(el.dataset.count, 10));
-          counterObserver.unobserve(el);
+
+/* ============================
+   ADMISSION COUNTDOWN TIMER
+============================ */
+
+function startCountdown() {
+
+    const targetDate = new Date("September 1, 2026 00:00:00").getTime();
+
+    const timer = setInterval(function () {
+
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+            clearInterval(timer);
+            document.getElementById("countdown").innerHTML = "Admissions Open";
+            return;
         }
-      });
-    }, { threshold: 0.5 });
-    counters.forEach(c => counterObserver.observe(c));
-  }
 
-  /* ── 5. ACTIVE NAV LINK ── */
-  const path = window.location.pathname.split('/').pop() || 'index.php';
-  document.querySelectorAll('#navbarMain .nav-link').forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === path) link.classList.add('active');
-  });
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-  /* ── 6. SMOOTH SCROLL FOR ANCHOR LINKS ── */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        if(document.getElementById("days")){
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+        }
+
+    }, 1000);
+
+}
+
+startCountdown();
+
+
+/* ============================
+   SMOOTH SCROLL
+============================ */
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
     anchor.addEventListener('click', function (e) {
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
+
         e.preventDefault();
-        const offset = 80;
-        const top = target.getBoundingClientRect().top + window.scrollY - offset;
-        window.scrollTo({ top, behavior: 'smooth' });
-      }
-    });
-  });
 
-  /* ── 7. FORM SUBMISSION FEEDBACK ── */
-  document.querySelectorAll('form[data-feedback]').forEach(form => {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const btn = form.querySelector('[type="submit"]');
-      const original = btn.innerHTML;
-      btn.disabled = true;
-      btn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending…';
-      setTimeout(() => {
-        btn.innerHTML = '<i class="fas fa-check me-2"></i>Sent!';
-        btn.classList.remove('btn-crimson');
-        btn.classList.add('btn-success', 'text-white');
-        setTimeout(() => {
-          btn.disabled = false;
-          btn.innerHTML = original;
-          btn.classList.add('btn-crimson');
-          btn.classList.remove('btn-success');
-          form.reset();
-        }, 3000);
-      }, 1500);
-    });
-  });
+        const target = document.querySelector(this.getAttribute('href'));
 
-  /* ── 8. GALLERY LIGHTBOX (simple) ── */
-  const galleryItems = document.querySelectorAll('.gallery-item[data-zoom]');
-  if (galleryItems.length) {
-    // Create modal
-    const modal = document.createElement('div');
-    modal.id = 'galleryModal';
-    modal.style.cssText = 'display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:9999;align-items:center;justify-content:center;cursor:zoom-out;';
-    modal.innerHTML = '<img id="galleryModalImg" style="max-width:90vw;max-height:90vh;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5);">';
-    document.body.appendChild(modal);
+        if (target) {
 
-    galleryItems.forEach(item => {
-      item.addEventListener('click', () => {
-        const src = item.querySelector('img')?.src;
-        if (src) {
-          document.getElementById('galleryModalImg').src = src;
-          modal.style.display = 'flex';
-          document.body.style.overflow = 'hidden';
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+
         }
-      });
+
     });
-    modal.addEventListener('click', () => {
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-    });
-    document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') { modal.style.display = 'none'; document.body.style.overflow = ''; }
-    });
-  }
 
 });
+
+
+/* ============================
+   SIMPLE COUNTER ANIMATION
+============================ */
+
+function animateCounters() {
+
+    const counters = document.querySelectorAll(".stat-card h3");
+
+    counters.forEach(counter => {
+
+        const update = () => {
+
+            const target = +counter.innerText.replace("+", "");
+            const count = +counter.getAttribute("data-count") || 0;
+
+            const increment = target / 100;
+
+            if (count < target) {
+
+                counter.setAttribute("data-count", count + increment);
+                counter.innerText = Math.ceil(count + increment);
+
+                setTimeout(update, 20);
+
+            } else {
+
+                counter.innerText = target + "+";
+
+            }
+
+        };
+
+        update();
+
+    });
+
+}
+
+
+/* trigger counter when stats visible */
+
+const statsSection = document.querySelector(".stats-section");
+
+if(statsSection){
+
+    const observer = new IntersectionObserver(entries => {
+
+        entries.forEach(entry => {
+
+            if (entry.isIntersecting) {
+                animateCounters();
+                observer.disconnect();
+            }
+
+        });
+
+    });
+
+    observer.observe(statsSection);
+
+}
+
+
+/* ============================
+   IMAGE LAZY LOADING
+============================ */
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const images = document.querySelectorAll("img[data-src]");
+
+    const imgObserver = new IntersectionObserver((entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            const img = entry.target;
+
+            img.src = img.dataset.src;
+
+            img.onload = () => {
+                img.setAttribute("data-loaded", "true");
+            };
+
+            observer.unobserve(img);
+
+        });
+
+    });
+
+    images.forEach(img => imgObserver.observe(img));
+
+});
+
+
+/* ============================
+   GALLERY IMAGE CLICK VIEW
+============================ */
+
+document.querySelectorAll(".gallery-img").forEach(img => {
+
+    img.addEventListener("click", function () {
+
+        const modal = document.createElement("div");
+
+        modal.style.position = "fixed";
+        modal.style.top = "0";
+        modal.style.left = "0";
+        modal.style.width = "100%";
+        modal.style.height = "100%";
+        modal.style.background = "rgba(0,0,0,0.8)";
+        modal.style.display = "flex";
+        modal.style.alignItems = "center";
+        modal.style.justifyContent = "center";
+        modal.style.zIndex = "9999";
+
+        const image = document.createElement("img");
+
+        image.src = this.src;
+        image.style.maxWidth = "90%";
+        image.style.maxHeight = "90%";
+        image.style.borderRadius = "10px";
+
+        modal.appendChild(image);
+
+        modal.onclick = function () {
+            document.body.removeChild(modal);
+        };
+
+        document.body.appendChild(modal);
+
+    });
+
+});
+
+
+/* ============================
+   PAGE LOADING FADE
+============================ */
+
+window.addEventListener("load", function(){
+
+    document.body.style.opacity = "1";
+
+});
+
+
+document.body.style.opacity = "0";
+document.body.style.transition = "opacity .5s";
