@@ -1,7 +1,7 @@
 <?php $pageTitle = "About Us"; include("includes/header.php"); ?>
 
 <!-- PAGE HERO -->
-<section class="page-hero" style="background-image:url('assets/images/banner2.jpeg');">
+<section class="page-hero" style="background-image:url('assets/images/banner.jpeg');">
   <div class="container text-center">
     <span class="hero-eyebrow">Est. July 27, 2023</span>
     <h1>About Scholar's College</h1>

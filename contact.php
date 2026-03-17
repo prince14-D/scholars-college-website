@@ -1,7 +1,7 @@
 <?php $pageTitle = "Contact Us"; include("includes/header.php"); ?>
 
 <!-- PAGE HERO -->
-<section class="page-hero" style="background-image:url('assets/images/banner2.jpeg');">
+<section class="page-hero" style="background-image:url('assets/images/banner1.jpeg');">
   <div class="container text-center">
     <span class="hero-eyebrow">We're Here to Help</span>
     <h1>Contact Us</h1>

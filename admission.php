@@ -1,7 +1,7 @@
 <?php $pageTitle = "Admissions"; include("includes/header.php"); ?>
 
 <!-- PAGE HERO -->
-<section class="page-hero" style="background-image:url('assets/images/banner1.jpeg');">
+<section class="page-hero" style="background-image:url('assets/images/banner.jpeg');">
   <div class="container text-center">
     <span class="hero-eyebrow">Enroll Your Child Today</span>
     <h1>Admissions</h1>

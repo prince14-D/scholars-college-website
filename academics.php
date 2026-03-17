@@ -1,7 +1,7 @@
 <?php $pageTitle = "Academics"; include("includes/header.php"); ?>
 
 <!-- PAGE HERO -->
-<section class="page-hero" style="background-image:url('assets/images/banner3.jpeg');">
+<section class="page-hero" style="background-image:url('assets/images/banner.jpeg');">
   <div class="container text-center">
     <span class="hero-eyebrow">Curriculum & Programs</span>
     <h1>Academics at Scholar's College</h1>

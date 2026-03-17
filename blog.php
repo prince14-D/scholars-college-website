@@ -1,7 +1,7 @@
 <?php $pageTitle = "Blog & News"; include("includes/header.php"); ?>
 
 <!-- PAGE HERO -->
-<section class="page-hero" style="background-image:url('assets/images/banner3.jpeg');">
+<section class="page-hero" style="background-image:url('assets/images/banner1.jpeg');">
   <div class="container text-center">
     <span class="hero-eyebrow">Stories & Updates</span>
     <h1>Blog & News</h1>
