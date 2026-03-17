@@ -77,6 +77,12 @@
       <span>&copy; <?php echo date('Y'); ?> Scholar's College Solid Foundation School System. All rights reserved.</span>
       <span>Motto: <a href="about.php" style="color:var(--gold)">Solid Foundation, Solid Future</a></span>
     </div>
+    <div class="container text-center mt-2">
+      <small style="color:rgba(255,255,255,.75);">
+        Developed by
+        <a href="https://tecliberia.com" target="_blank" rel="noopener noreferrer" style="color:var(--gold);">Tec Liberia Group</a>
+      </small>
+    </div>
   </div>
 </footer>
 
