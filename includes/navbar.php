@@ -56,8 +56,8 @@ function navLink($label, $href, $current) {
         <?php navLink('Blog',       'blog.php',     $currentPage); ?>
         <?php navLink('Contact',    'contact.php',  $currentPage); ?>
         <li class="nav-item">
-          <a class="nav-link nav-apply-btn ms-2" href="admission.php">
-            <i class="fas fa-pen-to-square"></i> Apply Now
+          <a class="nav-link nav-apply-btn ms-2" href="eportal/">
+            <i class="fas fa-pen-to-square"></i> E-Portal
           </a>
         </li>
       </ul>

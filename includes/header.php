@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Scholar's College Solid Foundation School System — Quality Education in Monrovia, Liberia. ECE, Primary & Junior High.">
 <meta name="theme-color" content="#0C2C5A">
+<link rel="icon" type="image/png" href="assets/images/logo.png">
+<link rel="shortcut icon" href="assets/images/logo.png">
 <title><?php echo isset($pageTitle) ? $pageTitle . " | " : ""; ?>Scholar's College</title>
 
 <!-- Bootstrap 5 -->
