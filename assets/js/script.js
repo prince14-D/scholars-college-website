@@ -11,6 +11,7 @@
 
 window.addEventListener("scroll", function () {
     const navbar = document.querySelector(".navbar");
+    if (!navbar) return;
 
     if (window.scrollY > 50) {
         navbar.classList.add("navbar-scrolled");
@@ -27,6 +28,7 @@ window.addEventListener("scroll", function () {
 function startCountdown() {
 
     const targetDate = new Date("September 1, 2026 00:00:00").getTime();
+    const countdownEl = document.getElementById("countdown");
 
     const timer = setInterval(function () {
 
@@ -35,7 +37,9 @@ function startCountdown() {
 
         if (distance < 0) {
             clearInterval(timer);
-            document.getElementById("countdown").innerHTML = "Admissions Open";
+            if (countdownEl) {
+                countdownEl.innerHTML = "Admissions Open";
+            }
             return;
         }
 
@@ -68,7 +72,10 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         e.preventDefault();
 
-        const target = document.querySelector(this.getAttribute('href'));
+        const targetSelector = this.getAttribute('href');
+        if (!targetSelector || targetSelector === "#") return;
+
+        const target = document.querySelector(targetSelector);
 
         if (target) {
 
@@ -89,27 +96,27 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 function animateCounters() {
 
-    const counters = document.querySelectorAll(".stat-card h3");
+    const counters = document.querySelectorAll(".stat-number[data-count]");
 
     counters.forEach(counter => {
 
         const update = () => {
 
-            const target = +counter.innerText.replace("+", "");
-            const count = +counter.getAttribute("data-count") || 0;
-
-            const increment = target / 100;
+            const target = +counter.getAttribute("data-count") || 0;
+            const count = +counter.getAttribute("data-current") || 0;
+            const increment = Math.max(1, target / 100);
 
             if (count < target) {
 
-                counter.setAttribute("data-count", count + increment);
-                counter.innerText = Math.ceil(count + increment);
+                const nextCount = Math.min(target, count + increment);
+                counter.setAttribute("data-current", nextCount);
+                counter.innerText = Math.ceil(nextCount);
 
                 setTimeout(update, 20);
 
             } else {
 
-                counter.innerText = target + "+";
+                counter.innerText = target;
 
             }
 
@@ -124,7 +131,7 @@ function animateCounters() {
 
 /* trigger counter when stats visible */
 
-const statsSection = document.querySelector(".stats-section");
+const statsSection = document.querySelector(".stats-bar");
 
 if(statsSection){
 
@@ -142,6 +149,34 @@ if(statsSection){
     });
 
     observer.observe(statsSection);
+
+}
+
+
+/* ============================
+   SCROLL REVEAL ANIMATIONS
+============================ */
+
+const revealItems = document.querySelectorAll(".reveal");
+
+if (revealItems.length) {
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+
+        entries.forEach(entry => {
+
+            if (!entry.isIntersecting) return;
+
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+
+        });
+
+    }, {
+        threshold: 0.12
+    });
+
+    revealItems.forEach(item => revealObserver.observe(item));
 
 }
 
@@ -229,6 +264,18 @@ window.addEventListener("load", function(){
     document.body.style.opacity = "1";
 
 });
+
+
+window.addEventListener("pageshow", function(){
+
+    document.body.style.opacity = "1";
+
+});
+
+
+setTimeout(function () {
+    document.body.style.opacity = "1";
+}, 1200);
 
 
 document.body.style.opacity = "0";
