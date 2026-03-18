@@ -49,12 +49,12 @@
     <div class="row g-4">
       <?php
       $posts = [
-        ['assets/images/campus1.jpeg','Announcement','Annual Academic Excellence Awards Ceremony','Scholar\'s College honors top-performing students from all grades for outstanding academic performance and positive character.','February 20, 2026','Principal\'s Office'],
-        ['assets/images/campus2.jpeg','Events','Parent-Teacher Conference — April 2026','Join us for our quarterly Parent-Teacher Conference to review student academic progress and set goals for the final term.','February 10, 2026','Admin'],
-        ['assets/images/campus3.jpeg','Community','Scholar\'s College Hosts Career Day for Junior High Students','Our Junior High students were inspired by professionals from law, medicine, education, and business at this year\'s Career Day event.','January 28, 2026','Staff Reporter'],
-        ['assets/images/banner1.jpeg','Achievement','Our Students Excel in Inter-School Academic Competition','Scholar\'s College students bring home top prizes in the annual Monrovia Inter-School Academic Olympiad, showcasing the power of a solid foundation.','January 15, 2026','Principal\'s Office'],
-        ['assets/images/banner2.jpeg','Academics','New STEM Resources Added to the Library','We are excited to announce the addition of new science, technology, engineering, and math resources to our school library.','January 5, 2026','Admin'],
-        ['assets/images/banner3.jpeg','Community','Christmas Carol Day Brings Joy to Campus','Students, staff, and parents gathered for our annual Christmas Carol Day, celebrating the holiday season with songs, performances, and community spirit.','December 18, 2025','Staff Reporter'],
+        ['assets/images/banner.jpeg','Announcement','Annual Academic Excellence Awards Ceremony','Scholar\'s College honors top-performing students from all grades for outstanding academic performance and positive character.','February 20, 2026','Principal\'s Office'],
+        ['assets/images/banner1.jpeg','Events','Parent-Teacher Conference — April 2026','Join us for our quarterly Parent-Teacher Conference to review student academic progress and set goals for the final term.','February 10, 2026','Admin'],
+        ['assets/images/banner1.jpeg','Community','Scholar\'s College Hosts Career Day for Junior High Students','Our Junior High students were inspired by professionals from law, medicine, education, and business at this year\'s Career Day event.','January 28, 2026','Staff Reporter'],
+        ['assets/images/activity1.jpeg','Achievement','Our Students Excel in Inter-School Academic Competition','Scholar\'s College students bring home top prizes in the annual Monrovia Inter-School Academic Olympiad, showcasing the power of a solid foundation.','January 15, 2026','Principal\'s Office'],
+        ['assets/images/activity2.jpeg','Academics','New STEM Resources Added to the Library','We are excited to announce the addition of new science, technology, engineering, and math resources to our school library.','January 5, 2026','Admin'],
+        ['assets/images/banner1.jpeg','Community','Christmas Carol Day Brings Joy to Campus','Students, staff, and parents gathered for our annual Christmas Carol Day, celebrating the holiday season with songs, performances, and community spirit.','December 18, 2025','Staff Reporter'],
       ];
       foreach ($posts as $i => $p): $d = ($i % 3) + 1; ?>
       <div class="col-lg-4 col-md-6 reveal reveal-delay-<?php echo $d; ?>">

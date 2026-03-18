@@ -37,18 +37,18 @@
 
       <?php
       $photos = [
-        ['assets/images/campus1.jpeg','school campus','campus','School Campus'],
-        ['assets/images/campus2.jpeg','students learning','students','Students Learning'],
-        ['assets/images/campus3.jpeg','school activities','events','School Activities'],
-        ['assets/images/banner1.jpeg','school building','campus','School Building'],
-        ['assets/images/banner2.jpeg','academic classes','academics','Academic Classes'],
-        ['assets/images/banner3.jpeg','school life','students','School Life'],
-        ['assets/images/campus1.jpeg','graduation ceremony','events','Graduation Ceremony'],
-        ['assets/images/campus2.jpeg','science class','academics','Science Class'],
-        ['assets/images/campus3.jpeg','sports day','events','Sports Day'],
-        ['assets/images/banner1.jpeg','library reading','academics','Library Reading'],
-        ['assets/images/banner2.jpeg','art class','students','Art Class'],
-        ['assets/images/banner3.jpeg','school assembly','campus','School Assembly'],
+        ['assets/images/activity1.jpeg','school campus','campus','School Campus'],
+        ['assets/images/activity2.jpeg','students learning','students','Students Learning'],
+        ['assets/images/activity3.jpeg','school activities','events','School Activities'],
+        ['assets/images/banner.jpeg','school building','campus','School Building'],
+        ['assets/images/banner1.jpeg','academic classes','academics','Academic Classes'],
+        ['assets/images/banner1.jpeg','school life','students','School Life'],
+        ['assets/images/activity1.jpeg','graduation ceremony','events','Graduation Ceremony'],
+        ['assets/images/activity2.jpeg','science class','academics','Science Class'],
+        ['assets/images/activity3.jpeg','sports day','events','Sports Day'],
+        ['assets/images/banner.jpeg','library reading','academics','Library Reading'],
+        ['assets/images/banner1.jpeg','art class','students','Art Class'],
+        ['assets/images/banner1.jpeg','school assembly','campus','School Assembly'],
       ];
 
       $fallbacks = [

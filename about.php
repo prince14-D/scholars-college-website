@@ -140,7 +140,7 @@
     <div class="row justify-content-center g-4">
       <?php
       $leaders = [
-        ['assets/images/principal.jpeg','Mr. Ebenezer P. Charlie','Principal & Co-Founder','Leading Scholar\'s College with a passion for academic excellence and community development.'],
+        ['assets/images/principal.png','Mr. Ebenezer P. Charlie','Principal & Co-Founder','Leading Scholar\'s College with a passion for academic excellence and community development.'],
         ['assets/images/principal.jpeg','Ms. Patience N. Dolo','Co-Founder & Director','Committed to building a school that nurtures moral character and academic achievement.'],
         ['assets/images/principal.jpeg','Mr. Arthur F. Folbay','Co-Founder & Administrator','Focused on ensuring safe, structured, and productive learning environments for all students.'],
       ];
@@ -170,7 +170,7 @@
       <div class="col-lg-4">
         <img src="assets/images/principal.jpeg" alt="Principal"
              style="width:100%;height:100%;min-height:380px;object-fit:cover;"
-             onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?w=600&q=80'">
+             onerror="this.src='/assets/images/principal.png'">
       </div>
       <div class="col-lg-8 p-4 p-lg-5" style="background:var(--white);">
         <div class="section-label">Leadership Message</div>

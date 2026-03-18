@@ -87,7 +87,7 @@
         <a href="admission.php" class="btn-crimson mt-3"><i class="fas fa-pen-to-square"></i> Apply for ECE</a>
       </div>
       <div class="col-lg-6 reveal reveal-delay-2">
-        <img src="assets/images/campus1.jpeg" class="img-fluid rounded shadow" alt="ECE" onerror="this.src='https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=800&q=80'">
+        <img src="assets/images/activity1.jpeg" class="img-fluid rounded shadow" alt="ECE" onerror="this.src='https://images.unsplash.com/photo-1527482797697-8795b05a13fe?w=800&q=80'">
       </div>
     </div>
 
@@ -105,7 +105,7 @@
         <a href="admission.php" class="btn-crimson mt-3"><i class="fas fa-pen-to-square"></i> Apply for Primary</a>
       </div>
       <div class="col-lg-6 reveal reveal-delay-2">
-        <img src="assets/images/campus2.jpeg" class="img-fluid rounded shadow" alt="Primary School" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80'">
+        <img src="assets/images/activity2.jpeg" class="img-fluid rounded shadow" alt="Primary School" onerror="this.src='https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=800&q=80'">
       </div>
     </div>
 
@@ -123,7 +123,7 @@
         <a href="admission.php" class="btn-crimson mt-3"><i class="fas fa-pen-to-square"></i> Apply for Junior High</a>
       </div>
       <div class="col-lg-6 reveal reveal-delay-2">
-        <img src="assets/images/campus3.jpeg" class="img-fluid rounded shadow" alt="Junior High" onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80'">
+        <img src="assets/images/activity3.jpeg" class="img-fluid rounded shadow" alt="Junior High" onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80'">
       </div>
     </div>
 

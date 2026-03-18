@@ -183,7 +183,7 @@
   <div class="container">
     <div class="row g-0 reveal">
       <div class="col-lg-5">
-        <img src="assets/images/principal.jpeg"
+        <img src="assets/images/principal.png"
              class="principal-img"
              alt="Mr. Ebenezer P. Charlie — Principal"
              onerror="this.src='assets/images/logo.png'">
@@ -281,7 +281,7 @@
       <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
         <div class="news-card">
           <div class="news-card-img-wrap">
-            <img src="assets/images/campus1.jpeg" class="news-card-img" alt="Admissions" onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80'">
+            <img src="assets/images/activity1.jpeg" class="news-card-img" alt="Admissions" onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&q=80'">
           </div>
           <div class="news-card-body">
             <span class="news-tag"><i class="fas fa-bullhorn me-1"></i>Announcement</span>
@@ -294,7 +294,7 @@
       <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
         <div class="news-card">
           <div class="news-card-img-wrap">
-            <img src="assets/images/campus2.jpeg" class="news-card-img" alt="Event" onerror="this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80'">
+            <img src="assets/images/activity2.jpeg" class="news-card-img" alt="Event" onerror="this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80'">
           </div>
           <div class="news-card-body">
             <span class="news-tag"><i class="fas fa-trophy me-1"></i>Achievement</span>
@@ -307,7 +307,7 @@
       <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
         <div class="news-card">
           <div class="news-card-img-wrap">
-            <img src="assets/images/campus3.jpeg" class="news-card-img" alt="Community" onerror="this.src='https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80'">
+            <img src="assets/images/activity3.jpeg" class="news-card-img" alt="Community" onerror="this.src='https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80'">
           </div>
           <div class="news-card-body">
             <span class="news-tag"><i class="fas fa-users me-1"></i>Community</span>
@@ -443,7 +443,7 @@
     <div class="row g-2 reveal">
       <div class="col-md-6">
         <div class="gallery-item" style="height:360px;" data-zoom>
-          <img src="assets/images/campus1.jpeg" alt="Campus" style="height:100%;width:100%;object-fit:cover;border-radius:8px;" onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80'">
+          <img src="assets/images/activity1.jpeg" alt="Campus" style="height:100%;width:100%;object-fit:cover;border-radius:8px;" onerror="this.src='https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=800&q=80'">
           <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
         </div>
       </div>
@@ -451,19 +451,19 @@
         <div class="row g-2 h-100">
           <div class="col-6">
             <div class="gallery-item" style="height:175px;" data-zoom>
-              <img src="assets/images/campus2.jpeg" alt="Students" style="height:100%;width:100%;object-fit:cover;border-radius:8px;" onerror="this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80'">
+              <img src="assets/images/activity2.jpeg" alt="Students" style="height:100%;width:100%;object-fit:cover;border-radius:8px;" onerror="this.src='https://images.unsplash.com/photo-1577896851231-70ef18881754?w=600&q=80'">
               <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
           </div>
           <div class="col-6">
             <div class="gallery-item" style="height:175px;" data-zoom>
-              <img src="assets/images/campus3.jpeg" alt="Activities" style="height:100%;width:100%;object-fit:cover;border-radius:8px;" onerror="this.src='https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80'">
+              <img src="assets/images/activity3.jpeg" alt="Activities" style="height:100%;width:100%;object-fit:cover;border-radius:8px;" onerror="this.src='https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&q=80'">
               <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
           </div>
           <div class="col-12">
             <div class="gallery-item" style="height:175px;" data-zoom>
-              <img src="assets/images/banner1.jpeg" alt="School" style="height:100%;width:100%;object-fit:cover;border-radius:8px;" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80'">
+              <img src="assets/images/activity4.jpeg" alt="School" style="height:100%;width:100%;object-fit:cover;border-radius:8px;" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80'">
               <div class="gallery-overlay"><i class="fas fa-expand"></i></div>
             </div>
           </div>
